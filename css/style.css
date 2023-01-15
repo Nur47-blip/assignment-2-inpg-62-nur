@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: rgb(222, 241, 252);
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 8px -4px lightblue;
+}
+
+.navbar div {
+    padding: 12px;
+}
+
+.navbar div:last-child {
+    margin-right: 5%;
+}
+
+.navbar div a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.navbar div:hover{
+    background-color: lightskyblue;
+}
+
+.biodata {
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    background-color: white;
+    box-shadow: 0px 0px 16px 2px lightblue;
+    overflow: auto;
+}
+
+#column1, #column2, #column3, #column4 {
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+
+#column1 {
+    margin-left: 36px;
+}
+
+#MyName {
+    margin:0;
+    margin-top: 16px;
+    font-weight: Bold;
+    font-size: 24px;
+}
+
+#Role {
+    color: rgb(83, 83, 83);
+    margin-bottom: 36px;
+}
+
+#column2 {
+    margin-left: 36px;
+    width: 500px;
+}
+
+#kontakButton, #resumeButton {
+    padding: 20px 52px;
+    border-radius: 8%;
+    font-size: medium;
+    font-weight: bold;
+}
+
+#kontakButton {
+    background-color: blue;
+    border-color: blue;
+    color: white;
+}   
+
+#resumeButton {
+    background-color: white;
+    color: limegreen;
+    margin-left: 16px;
+    border: solid;
+}
+
+#col3col4 {
+    display: flex;
+    flex-direction: row;
+}
+
+#column3 p, #column4 p {
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+
+#column3 p:last-child, #column4 p:last-child {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#column3 {
+    font-weight: bold;
+    padding: 0;
+    padding-left: 36px;
+    border-left: lightblue solid;
+}
+
+#column4 {
+    margin-left: 36px;
+}
+
+.form {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    padding-top: 16px;
+}        
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 32px;
+}
+
+#submit {
+    margin-top: 16px;
+    background-color: green;
+    border-color: green;
+    font-weight: bold;
+    color: white;
+    height: 36px;
+}
+
+.button-container {
+    display: flex;
+}
+
+@media(max-width:800px) {
+    .biodata {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #column1 {
+        margin-bottom: 12px;
+    }
+
+    #column2 {
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    #column2 div {
+        justify-content: center;
+    }
+
+    #column3 {
+        margin-top: 0px;
+        border:none;
+        margin-left: 44px;
+    }
+
+    #column4 {
+        margin-top: 0px;
+    }
+
+}

@@ -1,0 +1,108 @@
+<!-- Menggunakan Flex Box -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div><a href="#">HOME</a></div>
+        <div><a href="#">PRODUCT</a></div>
+        <div><a href="#">GALLERY</a></div>
+        <div><a href="#">BLOG</a></div>
+        <div><a href="#">INVENTORY</a></div>
+    </div>
+    <div class="biodata">
+        <div id="column1">
+            <img src="images/my-photo.jpg" alt="foto" height="180px" width="180px" 
+            style="object-fit: cover; object-position: 100% 0%; border-radius: 100%">
+        </div>
+        <div id="column2">
+            <p id="MyName">Muhammad Nur Alamsyah</p>
+            <p id="Role">Front End Designer</p>
+            <div class="button-container">
+                <button id="kontakButton" onclick="show()">Edit</button>
+                <button id="resumeButton">Resume</button>
+            </div>
+        </div>
+        <div id="col3col4">
+            <div id="column3">
+                <p>Availability</p>
+                <p>Usia</p>
+                <p>Lokasi</p>
+                <p>Pengalaman</p>
+                <p>Email</p>
+            </div>
+            <div id="column4">
+                <p id="hasilAvailability">Full Time</p>
+                <p id="hasilAge">23</p>
+                <p id="hasilAlamat">Malang, Indonesia</p>
+                <p id="hasilYears">2</p>
+                <p id="hasilEmail">email@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="form" id="formContainer" style="display:none">
+        <form action="">
+            <div>
+                <label for="nama">Nama</label>
+                <input type="text" name="nama" id="name">
+            </div>
+            <div>
+                <label for="role">Role</label>
+                <input type="text" name="role" id="role">
+            </div>
+            <div>
+                <label for="availability">Availability</label>
+                <input type="text" name="availability" id="availability">
+            </div>
+            <div>
+                <label for="age">Age</label>
+                <input type="text" name="age" id="age">
+            </div>
+            <div>
+                <label for="alamat">Lokasi</label>
+                <input type="text" name="alamat" id="alamat">
+            </div>
+            <div>
+                <label for="years_experience">Years Experience</label>
+                <input type="text" name="years_experience" id="years">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="inputEmail">
+            </div>
+        </form>
+        <input type="submit" value="SUBMIT" id="submit" onclick="print()">
+    </div>
+
+    <script>
+        function print(){
+            document.getElementById("MyName").innerHTML = document.getElementById("name").value;
+            document.getElementById("Role").innerHTML = document.getElementById("role").value;
+            document.getElementById("hasilAvailability").innerHTML = document.getElementById("availability").value;
+            document.getElementById("hasilAge").innerHTML = document.getElementById("age").value;
+            document.getElementById("hasilAlamat").innerHTML = document.getElementById("alamat").value;
+            document.getElementById("hasilYears").innerHTML = document.getElementById("years").value;
+            document.getElementById("hasilEmail").innerHTML = document.getElementById("inputEmail").value;
+            document.getElementById("formContainer").style.display = "none";
+        }
+
+        function show(){
+            document.getElementById("name").value = document.getElementById("MyName").innerHTML;
+            document.getElementById("role").value = document.getElementById("Role").innerHTML;
+            document.getElementById("availability").value = document.getElementById("hasilAvailability").innerHTML;
+            document.getElementById("age").value = document.getElementById("hasilAge").innerHTML;
+            document.getElementById("alamat").value = document.getElementById("hasilAlamat").innerHTML;
+            document.getElementById("years").value = document.getElementById("hasilYears").innerHTML;
+            document.getElementById("inputEmail").value = document.getElementById("hasilEmail").innerHTML;
+            document.getElementById("formContainer").style.display = "block";
+        }
+    </script>
+</body>
+</html>
